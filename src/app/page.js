@@ -1,4 +1,5 @@
 import CardFilme from '@/components/CardFilme'
+import NavBar from '@/components/NavBar'
 import Title from '@/components/Title'
 
 async function carregarFilmes(){
@@ -10,22 +11,12 @@ async function carregarFilmes(){
 
 export default async function Home() {
   
+  
   const filmes = await carregarFilmes()
 
   return ( //JSX
     <>
-      <nav className="bg-slate-900 p-4">
-        <ul>
-          <li><a href="#"><h1 className="text-3xl font-bold">Fiap Filmes</h1></a></li>
-        </ul>
-        <ul>
-          <li><a href="#">favoritos</a></li>
-        </ul>
-        <ul>
-          <li><a href="#">filmes</a></li>
-        </ul>
-        
-      </nav>
+     <NavBar />
 
      <Title>em alta</Title>
 
